@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 회문판별하는 함수
+        function isPalindrome(str) {
+            // 입력받은 str의 거꾸로 된 str을 생성
+            const reversed = str.replaceAll(' ','').split('').reverse().join('')
+            const str1 = str.replaceAll(' ','').split('').join('')
+
+            // 리버스한 str과 주어진 str이 같으면 true 출력
+            if (reversed === str1) {
+                return true
+            }
+
+            else {
+                return false
+            }
+
+        }
+
+        console.log(
+            isPalindrome(`a santa at nasa`),
+            isPalindrome(`google`)
+        )
+        
+    </script>
+</body>
+</html>
